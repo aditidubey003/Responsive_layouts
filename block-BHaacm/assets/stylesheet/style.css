@@ -141,12 +141,13 @@ html {
 body {
   line-height: 1.5;
   font-family: "Roboto", sans-serif;
+  /* overflow-x: hidden; */
 }
 
 .container{
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 2rem;
 }
 
 
@@ -160,6 +161,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   /* align-items: center; */
 }
 /* Header */
@@ -175,6 +177,7 @@ body {
   margin-left: 3rem;
   font-size: 1.2rem;
   align-items: center;
+  /* margin: 0 10px; */
 }
 
 #active-item{
@@ -182,9 +185,12 @@ body {
 }
 
 /* Article-section  */
+.flex-48{
+  flex: 0 1 48%;
+}
 
-.article, .article-img{
-  width: 47%;
+.flex-30{
+  flex: 0 1 30%;
 }
 .article-section{
   padding: 2.7rem 0;
@@ -225,9 +231,7 @@ font-weight: 400;
 .blog-section img{
   width: 100%;
 }
-.card{
-width: 30%;
-}
+
 
 .card h4{
   font-size: 1.6rem;
@@ -264,3 +268,34 @@ width: 30%;
   color: var(--text);
   margin-left: 2rem;
 }
+
+
+.flex-col{
+display: flex;
+flex-direction: column;
+}
+
+/* Mobile Layout */
+
+@media screen and (max-width: 768px) {
+html{
+  font-size: 12px;
+}
+  .flex, .flex-2{
+    flex-wrap: wrap;
+  }
+.flex-48, .flex-30{
+flex: 1 1 100%;
+margin: 16px 0;
+}
+
+.column{
+  flex-direction: column;
+}
+
+.nav-items li{
+  margin-left: 0;
+}
+}
+
+
